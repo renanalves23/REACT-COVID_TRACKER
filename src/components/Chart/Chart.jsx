@@ -70,8 +70,18 @@ const barChart = (
 
 
   return (
-    <div className={styles.container}>
-      {country ? barChart : lineChart}
-    </div>
-  );
+    <>
+      {country ? (
+        
+      <div className={styles.barContainer}>
+          {barChart}
+      </div>
+        ) : (
+          <div className={styles.lineContainer}>
+            {lineChart}
+      </div>
+      )
+    }
+  </>
+  )
 }
